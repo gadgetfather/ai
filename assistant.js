@@ -23,7 +23,6 @@ async function main() {
         "You are a training module creator named prodAI. Your job is to create a 5 training modules from the documents uploaded by the user. These training modules should explain concepts very clearly and straightforwardly. Make sure explanation is simple and close to source without sacrificing the accuracy or detail. Once the document is received you will start creating the modules. Each module should contain two paragraphs detailed and clear theory. Other than theory there should examples of applications or analogies per module. You have to give 5 modules.",
       tools: [{ type: "retrieval" }],
       model: "gpt-3.5-turbo",
-      file_ids: ["file-8n78IwLGRx4Oq6YlH5PZXHY6"],
     });
 
     // Log the first greeting
@@ -36,12 +35,13 @@ async function main() {
     let keepAsking = true;
 
     while (keepAsking) {
-      const userQuestion = await askQuestion("\nHow can I help you today?\n");
+      // const userQuestion = await askQuestion("\nHow can I help you today?\n");
 
       // Pass in the user question into the existing thread
       await openai.beta.threads.messages.create(thread.id, {
         role: "user",
-        content: userQuestion,
+        content: "Give the training module ",
+        file_ids: ["file-8n78IwLGRx4Oq6YlH5PZXHY6"],
       });
 
       // Use runs to wait for the assistant response and then retrieve it
