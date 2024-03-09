@@ -19,6 +19,8 @@ export async function jsoon(content) {
           {
           id:"",
           moduleName: "Name of the module",
+          estimatedTime: "time in minutes to complete the module",
+          totalTopics: "total number of topics in the module",
           shortModuleDescription: "short description of the module",
           ModuleContent: [
             {
