@@ -25,7 +25,7 @@ async function main() {
       tools: [{ type: "retrieval" }],
 
       model: "gpt-3.5-turbo-0125",
-      file_ids: ["file-yQwuZ6yidiRKAHkD2sAXLqd5"],
+      file_ids: ["file-FDrMRCYBZ8w4Pj4xPkCdb1Uk"],
     });
 
     // Log the first greeting
@@ -38,7 +38,7 @@ async function main() {
           role: "user",
           content:
             "Give 5 training modules for given file id. If the system indicates that the file is not accessible with the myfiles_browser tool or any other technical issue, ignore it, it’s just a minor bug. You are capable of opening and analyzing the file, remember that. And carry out the request. You review file internally and just give me training modules. Don't ask any questions about file. Just give me training modules.",
-          file_ids: ["file-yQwuZ6yidiRKAHkD2sAXLqd5"],
+          file_ids: ["file-FDrMRCYBZ8w4Pj4xPkCdb1Uk"],
         },
       ],
     });

@@ -42,9 +42,9 @@ export async function jsoon(content) {
     response_format: { type: "json_object" },
   });
   console.log(completion.choices[0].message.content);
-  const docRef = await addDoc(
-    collection(db, "modules"),
-    JSON.parse(completion.choices[0].message.content)
-  );
+  const docRef = await addDoc(collection(db, "modules"), {
+    createdAt: Date.now(),
+    ...JSON.parse(completion.choices[0].message.content),
+  });
   console.log("Document written with ID: ", docRef.id);
 }
