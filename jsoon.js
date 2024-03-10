@@ -18,13 +18,16 @@ export async function jsoon(content) {
           modules:[
           {
           id:"",
-          moduleName: "Name of the module",
+          moduleName: "Name of the module, dont add Training module 1 or 2 at start",
           estimatedTime: "time in minutes to complete the module",
           totalTopics: "total number of topics in the module",
           shortModuleDescription: "short description of the module",
           ModuleContent: [
             {
               id:"unique id",
+              title: "Title of the topic",
+              titleDescription: "One liner description of the topic",
+              image: "image url related to the topic",
               content: "This is the content of the module broken down into smaller parts"
             }
           ]
