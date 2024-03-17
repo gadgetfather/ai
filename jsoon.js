@@ -38,6 +38,8 @@ export async function jsoon(content) {
                   {
                     id: "questions index",
                     question: "Question",
+                    difficulty: "easy/medium/hard",
+                    info: "additional information about the answer, will use this when user has selected the correct answer, this will be shown as a info",
                     options: [
                       { id: "unique id", option: "Option 1" },
                       { id: "unique id", option: "Option 2" },
