@@ -5,7 +5,7 @@ const moduleData = {
       id: 1,
       moduleName: "General Information and Principles of Operation",
       estimatedTime: 60,
-      totalTopics: 1,
+      totalTopics: 2,
       shortModuleDescription:
         "This module covers the general information and principles of operation for the Respironics V60 Ventilator.",
       ModuleContent: [
@@ -16,7 +16,16 @@ const moduleData = {
             "An overview of the Respironics V60 Ventilator, its intended use, ventilation modes, and pneumatic system.",
           image: "",
           content:
-            "The Respironics V60 Ventilator is an assist ventilator intended to augment patient breathing. It is designed for spontaneously breathing individuals who require mechanical ventilation, including patients with respiratory failure, chronic respiratory insufficiency, or obstructive sleep apnea. The ventilator can support both pediatric and adult patients, and can be used for both noninvasive and invasive ventilation.\n\nThe ventilator offers a range of conventional pressure modes, including CPAP (continuous positive airway pressure), PCV (pressure-controlled ventilation), and S/T (spontaneous/timed). It also offers the volume-targeted AVAPS (average volume-assured pressure support) mode, which combines the attributes of pressure-controlled and volume-targeted ventilation.\n\nThe ventilator uses Auto-Trak Sensitivity, which allows it to automatically compensate for unintentional leaks by maintaining a stable baseline and adjusting trigger and cycle thresholds for optimum patient-ventilator synchrony.\n\nThe ventilator's pneumatic system uses ambient air and high-pressure oxygen to deliver gas to the patient. The system compares the proximal (patient) pressure measurement with the ventilator outlet (machine) pressure, and adjusts the machine pressure to compensate for the pressure drop across the inspiratory filter, patient circuit, and humidifier. This helps ensure accurate and responsive pressure delivery and leak compensation.\n\nBreaths delivered by the ventilator are pressure controlled, with the exception of the AVAPS mode, in which the ventilator's applied pressure is automatically adjusted over several breaths to maintain a target tidal volume. The ventilator uses its unique Auto-Trak Sensitivity algorithm to adjust triggering and cycling automatically, without the need for the user to set these parameters.",
+            "The Respironics V60 Ventilator is an assist ventilator intended to augment patient breathing. It is designed for spontaneously breathing individuals who require mechanical ventilation, including patients with respiratory failure, chronic respiratory insufficiency, or obstructive sleep apnea. The ventilator can support both pediatric and adult patients, and can be used for both noninvasive and invasive ventilation.\n\nThe ventilator offers a range of conventional pressure modes, including CPAP (continuous positive airway pressure), PCV (pressure-controlled ventilation), and S/T (spontaneous/timed). It also offers the volume-targeted AVAPS (average volume-assured pressure support) mode, which combines the attributes of pressure-controlled and volume-targeted ventilation.",
+        },
+        {
+          id: 2,
+          title: "General Information and Principles of Operation",
+          titleDescription:
+            "An overview of the Respironics V60 Ventilator, its intended use, ventilation modes, and pneumatic system.",
+          image: "",
+          content:
+            "The ventilator uses Auto-Trak Sensitivity, which allows it to automatically compensate for unintentional leaks by maintaining a stable baseline and adjusting trigger and cycle thresholds for optimum patient-ventilator synchrony.\n\nThe ventilator's pneumatic system uses ambient air and high-pressure oxygen to deliver gas to the patient. The system compares the proximal (patient) pressure measurement with the ventilator outlet (machine) pressure, and adjusts the machine pressure to compensate for the pressure drop across the inspiratory filter, patient circuit, and humidifier. This helps ensure accurate and responsive pressure delivery and leak compensation.\n\nBreaths delivered by the ventilator are pressure controlled, with the exception of the AVAPS mode, in which the ventilator's applied pressure is automatically adjusted over several breaths to maintain a target tidal volume. The ventilator uses its unique Auto-Trak Sensitivity algorithm to adjust triggering and cycling automatically, without the need for the user to set these parameters.",
         },
       ],
       assessment: {
