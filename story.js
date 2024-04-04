@@ -26,28 +26,32 @@ async function story() {
 
     //     console.log(completion.choices[0].message.content);
 
-    const story = `Once upon a time, there was a boy named Tom who was determined to learn how to ride a bike. He had watched his friends zooming around the park on their bikes, and he couldn't wait to join them. Tom's dad had promised to teach him, but Tom knew it wouldn't be easy. He had tried before but always ended up falling off and scraping his knees. However, Tom was determined not to give up.
+    const story = `Once upon a time, in a small, bustling village nestled at the foot of vast, whispering mountains, lived a young boy named Jack. With hair as wild as the wind and eyes sparkling with untamed curiosity, Jack dreamed of exploring the towering peaks that kissed the skies above his home. One bright morning, with the sun casting a golden glow over the world, Jack decided that today was the day he would embark on his grand adventure.
+    ###
+    With a backpack slung over his shoulders, filled with essentials and a heart brimming with excitement, Jack waved goodbye to his village. He began his ascent, the path winding and steep, flanked by trees that seemed to cheer him on with every whispering breeze. But as Jack climbed higher, the friendly path transformed. Rocks and roots conspired to trip him, and the mountain's breath grew cold and biting.
+    ###
+    Undeterred, Jack pressed on, his legs aching but his spirit undimmed. He remembered stories of adventurers and explorers who faced challenges with courage and persistence. With each step, he whispered to himself, "Just one more step, Jack. Just one more." And so, with determination as his companion, he overcame slippery slopes and treacherous trails.
+    ###
+    As the sun began to dip below the horizon, painting the sky with shades of orange and pink, Jack reached the summit. The view that greeted him was beyond words—valleys dipped in gold, rivers twinkling like silver snakes, and the endless sky stretching into infinity. In that moment, Jack understood the true beauty of persistence, the joy of conquering not just the mountain, but the doubts within.
+    ###
+    With the stars beginning to twinkle in the sky, like diamonds scattered across velvet, Jack made his way back home, his heart filled with a new kind of richness. He realized that every obstacle faced and every challenge overcome was a step towards achieving his dreams. And in sharing his tale with others, Jack inspired a new generation to explore, persist, and discover the wonders of the world with courage and an unyielding spirit.`;
 
-    Every afternoon after school, Tom would head to the park with his dad. He would sit on his bike and push off, wobbling and struggling to find his balance. But no matter how many times he fell, Tom would get back up and try again. His dad would cheer him on, reminding him that learning to ride a bike takes time and practice. Tom's determination only grew stronger with each fall.
+    const paragraphs = story.split("###");
+    console.log(paragraphs.length);
 
-    As the days passed, Tom's persistence began to pay off. He started to feel more confident on the bike, mastering the art of steering and pedaling. With each practice session, he could feel himself improving. Finally, one sunny afternoon, Tom pedaled down the park path without wobbling, his grin stretching from ear to ear. He had done it! He could ride a bike!
-
-    Tom's friends cheered as he rode past them, feeling a sense of accomplishment that made all the falls and struggles worth it. From that day on, Tom rode his bike every chance he got, exploring the park and feeling the wind in his hair. He had learned that with persistence and hard work, anything was possible. And he was proud to have never given up on his dream of riding a bike.`;
-
-    const paragraphs = story.split("\n\n");
-
-    for (let i = 0; i < paragraphs.length; i++) {
+    for (let i = 0; i < 1; i++) {
       // Generating a prompt for an anime-style image based on the story content
       const imagePrompt = `
-        story context is delimited by ###
+      
     
-        ###${story}###
-    
-        Generate an origami style image for the text delimited by """.  Make sure to keep the image related only to the main character which is tom.
+        Create an image in a vibrant, layered paper cut-out style. The scene should be composed of brightly colored paper elements with clear, bold outlines. Characters or objects in the scene will have a charming, simplified look with exaggerated features and a slight three-dimensional effect to give the impression of depth. The background should feature elements with overlapping layers to enhance the paper art aesthetic. Each component, whether a character, item, or part of the scenery, should look like it is crafted from pieces of colored paper, assembled with care to bring the scene to life. 
+
+Here is the description delimited in """
     
         """${paragraphs[i]}"""
     
-        Remember this is for the kids story. Just generate image and don't include any text in it. DO NOT INCLUDE TEXT.`;
+        Here is seed text for the image generation: 52231
+       `;
 
       // Request to generate an image
       const imageResponse = await openai.images.generate({
